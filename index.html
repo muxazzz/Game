@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Игра</title>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="./style.css">
+ </head>
+ <body>
+   <div class="container">
+     <h1>Поиграем в города Краснодарского края? </h1>
+     <h2>Какие крупные города ты знаешь? Угадай какой город загадал я?</h2>
+
+     <form>
+       <input type="text" />
+       <button type="button" class="btn btn-primary">Поеахли</button>
+     </form>
+
+     <div class="result">     </div>
+     <div class="result1">Подсказка:         <img src="https://www.yuga.ru/media/c1/b5/ust_pad20171213T163856__jd4g5x7.jpg" width="250" height="150"></img></div>     
+
+     
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="./script.js"></script>
+   <script>
+    let button = document.querySelector('.btn');
+
+    button.addEventListener('click', showPopup);
+    
+    function showPopup() {
+        document.querySelector('.result1').classList.toggle('visible');
+        console.log('showPopup работает');
+    }
+</script>
+ </body>
+</html>
